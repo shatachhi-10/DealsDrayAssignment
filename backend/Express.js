@@ -77,6 +77,8 @@ app.post("/login", (req, res) => {
     });
 });
 
+
+
 // respond data to the Dashbord component
 app.get("/user/:ID", (req, res) => {
   let ID = req.params.ID;
@@ -90,8 +92,9 @@ app.get("/user/:ID", (req, res) => {
     });
 });
 
-// storing create employee form data
 
+
+// storing create employee form data
 app.post("/employees", upload.single("image"), (req, res) => {
   console.log(req.body);
   modelEmployeeRegister
@@ -124,13 +127,14 @@ app.post("/employees", upload.single("image"), (req, res) => {
     });
 });
 
-// respnding employee-list
 
+// respnding employee-list
 app.get("/employee-list", (req, res) => {
   modelEmployeeRegister.find().then((e) => {
     res.send(e);
   });
 });
+
 
 // edit-employee send data
 app.get("/employee-list/:ID", (req, res) => {
