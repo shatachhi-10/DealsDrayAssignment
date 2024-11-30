@@ -16,7 +16,7 @@ app.use("/images", express.static(path.join(__dirname, "Images")));
 
 // mongo connection
 mongoose.connect(
-  "mongodb+srv://Shubhamy:21jumlcpBeAHUxbx@cluster0.ywnqbfq.mongodb.net/Database"
+  "mongodb+srv://shatachhinigam2806:IKoI3ySTJgJtnGrZ@cluster0.9vsjmsa.mongodb.net/Database"
 );
 mongoose.connection
   .once("open", () => {
